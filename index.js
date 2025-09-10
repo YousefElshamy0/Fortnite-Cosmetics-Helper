@@ -2,18 +2,25 @@ import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
 import path from "path";
-const __dirname = path.resolve();
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 3000;
 const url = "https://export-service.dillyapis.com";
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static("public"));
 
-app.use(express.static("public"));
+// ✅ تعديل هنا
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(bodyParser.urlencoded({ extended: true }));
+
 let cosmeticsData;
+
 app.get("/", async (req, res) => {
   try {
     const response = await axios.get(url + "/v1/cosmetics/new");
@@ -37,10 +44,8 @@ app.get("/search", async (req, res) => {
   console.log("query is ", query);
   const searchResult = await axios.get(url + "/v1/cosmetics");
   const searchData = searchResult.data.data;
-  // console.log(searchData);
 
   let result = searchData.filter((element) => {
-    // console.log(element.name);
     return element.name?.toLowerCase().includes(query);
   });
 
@@ -53,6 +58,6 @@ app.get("/search", async (req, res) => {
   });
 });
 
-export default app;
-
-
+app.listen(port, () => {
+  console.log(`Server Running on port : ${port}`);
+});
