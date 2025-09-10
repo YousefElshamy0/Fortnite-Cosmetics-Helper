@@ -53,6 +53,6 @@ app.get("/search", async (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server Running on port : ${port}`);
-});
+export default app;
+
+
