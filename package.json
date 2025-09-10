@@ -1,10 +1,33 @@
 {
+  "name": "fortnite-cosmetics-helper",
+  "version": "1.0.0",
+  "description": "An unofficial Fortnite cosmetic helper to show a database full of Fortnite cosmetics and upcoming cosmetics.",
+  "main": "index.js",
   "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
-    "axios": "^1.11.0",
-    "body-parser": "^2.2.0",
+    "axios": "^1.7.4",
+    "body-parser": "^1.20.2",
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "nodemon": "^3.1.10"
-  }
+    "express": "^4.21.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "keywords": [
+    "fortnite",
+    "cosmetics",
+    "helper",
+    "express",
+    "ejs"
+  ],
+  "author": "Yousef Elshamy",
+  "license": "MIT"
 }
