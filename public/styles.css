@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Fortnite";
+  src: url("/fonts/fortnite.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Fortnite", sans-serif;
+  letter-spacing: 1.5px;
+  background-color: #2e3036;
+}
+
+.rarity-uncommon {
+  background-color: #007502;
+}
+.rarity-common {
+  background-color: #646b70;
+}
+.rarity-rare {
+  background-color: #0052b3;
+}
+.rarity-epic {
+  background-color: #6e2bc5;
+}
+.rarity-legendary {
+  background-color: #b94d10;
+}
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.card-img-top {
+  padding: 10px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+.card-text {
+  font-size: 0.9rem;
+  color: #181717;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0%;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.logo {
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+.logo:hover {
+  color: #2cc8e9;
+  text-decoration: none;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+h2 {
+  color: #2cc8e9;
+  text-align: center;
+  margin-top: 0%;
+  font-size: 1.3rem;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.btn-secondary {
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+}
+.form-control {
+  font-size: 1.3rem;
+}
+.tag-error {
+  color: black;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+  width: 16.5rem;
+  height: 2.5rem;
+  align-self: center;
+  font-size: 1.5rem;
+  margin: 20px auto;
+}
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.card {
+  max-width: 100%;
+}
+footer {
+  color: #a7abaf;
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .btn-secondary {
+    font-size: 1rem;
+  }
+  .form-control {
+    font-size: 1rem;
+  }
+}
